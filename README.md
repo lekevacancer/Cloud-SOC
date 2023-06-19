@@ -67,9 +67,14 @@ In the "AFTER" stage, I implemented a series of measures to strengthen the secur
 By comparing the security metrics before and after implementing these hardening measures and security controls, I was able to demonstrate the effectiveness of each step in improving the overall security posture of the Azure environment.
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+- The displayed attack map serves as a visual representation of the repercussions caused by leaving the Network Security Group (NSG) open, enabling unrestricted flow of malicious traffic. This visualization emphasizes the significance of implementing adequate security measures, such as enforcing restrictive NSG rules. By doing so, unauthorized access can be prevented, and potential threats can be minimized effectively.
+![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/Aa8Nnjj.png) <br>
+
+- The showcased(syslog-ssh-suth-fail) attack map brings attention to the significant number of syslog authentication failures encountered by the Linux server that was deployed. These failures suggest unauthorized access attempts originating from external sources. This serves as a crucial reminder of the utmost importance of implementing robust authentication mechanisms to secure Linux servers and diligently monitoring system logs for any indications of intrusion attempts.
+![Linux Syslog Auth Failures](https://i.imgur.com/ETLwFd9.png) <br>
+
+- The displayed attack map presents multiple instances of RDP and SMB failures, illustrating the persistent efforts of potential attackers to exploit these protocols. This visualization strongly emphasizes the necessity of securing remote access and file sharing services to safeguard against unauthorized access and potential cyber threats. It highlights the critical importance of implementing robust security measures to protect these services and maintain a secure network environment.
+![Windows RDP/SMB Auth Failures](https://i.imgur.com/7XXQ2xB.png) <br>
 
 ## Metrics Before Hardening / Security Controls
 
