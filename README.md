@@ -35,10 +35,14 @@ For this project, I built a mini honeynet in Azure to simulate real-world cyber 
 - Analysis After Remediation: Fianlly, in order to evaluate the effectiveness of the implemented measures, I observed the environment for an additional 24-hour period, measuring security metrics once again and compared them against the intial baseline.
   
 ## Architecture Before Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
+![Architecture Diagram](https://i.imgur.com/1tLjWY9.png)
+Prior to Implementing Hardening Measures and Security Controls:
+
+At the "BEFORE" stage of the project, the resources were deliberately set up with public exposure to the internet. This intentionally insecure configuration aimed to attract potential cyber attackers and monitor their techniques. The Virtual Machines had both their Network Security Groups (NSGs) and built-in firewalls configured with wide-open rules, granting unrestricted access from any source. Furthermore, all other resources, including storage accounts and databases, were deployed with public endpoints that were visible to the internet, without utilizing private endpoints for enhanced security.
+
 
 ## Architecture After Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
+![Architecture Diagram](https://i.imgur.com/ch1cAMU.png)
 
 The architecture of the mini honeynet in Azure consists of the following components:
 
@@ -52,7 +56,15 @@ The architecture of the mini honeynet in Azure consists of the following compone
 
 For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
 
-For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
+In the "AFTER" stage, I implemented a series of measures to strengthen the security and protect the environment. These enhancements comprised the following:
+
+- Network Security Groups (NSGs): I fortified the NSGs by configuring rules to block all inbound and outbound traffic, except for my own public IP address. This ensured that only authorized traffic from a trusted source was permitted to access the virtual machines.
+
+- Built-in Firewalls: I fine-tuned the settings of the virtual machine's built-in firewalls to restrict access and prevent unauthorized connections. This involved adjusting the firewall rules based on the specific requirements of each virtual machine, minimizing the potential attack surface.
+
+- Private Endpoints: To bolster the security of other Azure resources, I replaced the public endpoints with Private Endpoints. This transition restricted access to sensitive resources, such as storage accounts and databases, to the virtual network, isolating them from the public internet. This added layer of protection safeguarded the resources against unauthorized access and potential attacks.
+
+By comparing the security metrics before and after implementing these hardening measures and security controls, I was able to demonstrate the effectiveness of each step in improving the overall security posture of the Azure environment.
 
 ## Attack Maps Before Hardening / Security Controls
 ![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
