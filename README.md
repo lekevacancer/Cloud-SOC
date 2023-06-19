@@ -78,7 +78,7 @@ By comparing the security metrics before and after implementing these hardening 
 
 ## Metrics Before Hardening / Security Controls
 
-The following table shows the metrics we measured in our insecure environment for 24 hours:
+The following table shows the metrics I measured in my insecure environment for 24 hours:
 Start Time 2023-06-16 5:17:32 AM
 Stop Time 2023-06-17 5:17:32 PM
 
