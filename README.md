@@ -26,6 +26,14 @@ For this project, I built a mini honeynet in Azure to simulate real-world cyber 
 - [NIST SP 800-53 Revision 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) for Security Control
 - [NIST SP 800-61 Revision 2](https://www.nist.gov/privacy-framework/nist-sp-800-61) for Incident Handling Guidance
   
+## Methodology
+
+- Creating the Honeynet: Initially, I deployed multiple virtual machines with known vulnerabilities in Azure, creating a simulated insecure environment.
+- Monitoring and Analysis: Next, I configured Azure to collect logs from various sources and consolidated them in the Log Analystics Workspace. Using Microsoft Sentinel, I built attack maps, setup alert triggers, and created incidents based on the gathered data.
+- Measurement of Secuirty Metrics: During the insecure state of the environment, I monitored and recorded key security metrics for a 24-hour period. This established a baseline for comparision once remediation measures were implemented.
+- Incident Response and Remediation: After addressing the identified incidents and vulnerabilities, I proceeded to stregthen the environment by implementing security best practices and following Azure-specific recommendations.
+- Analysis After Remediation: Fianlly, in order to evaluate the effectiveness of the implemented measures, I observed the environment for an additional 24-hour period, measuring security metrics once again and compared them against the intial baseline.
+  
 ## Architecture Before Hardening / Security Controls
 ![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
 
