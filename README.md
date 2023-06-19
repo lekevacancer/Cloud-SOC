@@ -10,7 +10,7 @@ For this project, I built a mini honeynet in Azure to simulate real-world cyber 
 - SecurityIncident (Incidents created by Sentinel)
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
-## Technologies, Regulations, and Azure Components Utilized
+## Technologies, Regulations, and Azure Components
 
 - Azure Virtual Network(VNet)
 - Azure Network Security Group(NSG)
