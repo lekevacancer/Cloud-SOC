@@ -1,9 +1,8 @@
 # Building a SOC + Honeynet in Azure (Live Traffic)
-![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
-
+![Cloud Honeynet / SOC](https://i.imgur.com/QhT9O0P.jpg)
 ## Introduction
 
-In this project, I build a mini honeynet in Azure and ingest log sources from various resources into a Log Analytics workspace, which is then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. I measured some security metrics in the insecure environment for 24 hours, apply some security controls to harden the environment, measure metrics for another 24 hours, then show the results below. The metrics we will show are:
+For this project, I built a mini honeynet in Azure to simulate real-world cyber attacks. I ingested log sources from various resources into a Log Analytics workspace, which was then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. I measured some security metrics in the insecure environment for 24 hours, applied some security controls to harden the environment, measured metrics for another 24 hours, then showed the results below. The metrics I followed are:
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
@@ -11,6 +10,22 @@ In this project, I build a mini honeynet in Azure and ingest log sources from va
 - SecurityIncident (Incidents created by Sentinel)
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
+## Technologies, Regulations, and Azure Components Utilized
+
+- Azure Virtual Network(VNet)
+- Azure Network Security Group(NSG)
+- Virtual Machines ((2) Windows (Attacker VM, Vulnerable VM), (1) Linux)
+- Log Analytics Workspace with Kusto Query Language (KQL) Queries
+- Azure Jey Vault for Secure Secrets Managemt
+- Azure Storeage Account for Data Storage
+- Microsoft Sentinel for Security Information and Event Management(SIEM)
+- Microsoft Defender for Cloud to Protect Cloud Resources
+- WIndows Remote Desktop for Remote Access
+- Command Line Interface(CLI) for System Management
+- Posershell for Automation and COnfiguration Management
+- [NIST SP 800-53 Revision 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) for Security Control
+- [NIST SP 800-61 Revision 2](https://www.nist.gov/privacy-framework/nist-sp-800-61) for Incident Handling Guidance
+  
 ## Architecture Before Hardening / Security Controls
 ![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
 
