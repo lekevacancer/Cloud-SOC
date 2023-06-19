@@ -80,7 +80,7 @@ By comparing the security metrics before and after implementing these hardening 
 
 The following table shows the metrics I measured in my insecure environment for 24 hours:
 Start Time 2023-06-16 5:17:32 AM
-Stop Time 2023-06-17 5:17:32 PM
+Stop Time 2023-06-17 5:17:32 AM
 
 | Metric                   | Count
 | ------------------------ | -----
@@ -97,12 +97,12 @@ Stop Time 2023-06-17 5:17:32 PM
 ## Metrics After Hardening / Security Controls
 
 The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls:
-Start Time 2023-03-18 15:37
-Stop Time	2023-03-19 15:37
+Start Time 2023-06-17 11:15:31 AM
+Stop Time	2023-06-18 11:15:31 AM
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 8778
+| SecurityEvent            | 12546
 | Syslog                   | 25
 | SecurityAlert            | 0
 | SecurityIncident         | 0
